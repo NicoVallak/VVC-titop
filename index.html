@@ -1,271 +1,750 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VVC | Alquiler de volquetes en Capital Federal desde 1987</title>
+  <meta name="description" content="Empresa familiar dedicada al alquiler de volquetes en Capital Federal. Servicio en toda la Ciudad de Buenos Aires con trayectoria desde 1987.">
+  <meta name="keywords" content="volquetes capital federal, alquiler de volquetes caba, volquetes ciudad de buenos aires, volquetes la boca, volquetes caba">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="VVC">
+  <link rel="canonical" href="https://vvc.com.ar/">
 
-<title>Volquetes en Capital Federal – Alquiler de volquetes en CABA | VVC</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
 
-<meta name="description" content="Más de 40 años brindando servicio de volquetes en Capital Federal. Llame ahora al 11-5306-3347.">
-  
-<meta name="keywords" content="volquetes capital federal, alquiler de volquetes caba, volquetes buenos aires, volquetes capital">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="VVC | Alquiler de volquetes en Capital Federal desde 1987">
+  <meta property="og:description" content="Empresa familiar dedicada al alquiler de volquetes en Capital Federal. Servicio en toda la Ciudad de Buenos Aires con trayectoria desde 1987.">
+  <meta property="og:url" content="https://vvc.com.ar/">
+  <meta property="og:site_name" content="VVC">
 
-<link rel="canonical" href="https://vvc.com.ar/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VVC | Alquiler de volquetes en Capital Federal desde 1987">
+  <meta name="twitter:description" content="Empresa familiar dedicada al alquiler de volquetes en Capital Federal. Servicio en toda la Ciudad de Buenos Aires con trayectoria desde 1987.">
 
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#ffffff">
-  
-<style>
+  <style>
+    :root{
+      --rojo:#d60000;
+      --verde:#25D366;
+      --negro:#111111;
+      --gris:#666666;
+      --gris-claro:#e5e7eb;
+      --fondo:#ffffff;
+      --suave:#f7f7f7;
+      --max:1100px;
+      --radio:16px;
+      --sombra:0 10px 24px rgba(0,0,0,0.06);
+    }
 
-body{
-font-family:Arial, Helvetica, sans-serif;
-margin:0;
-background:white;
-text-align:center;
-}
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
 
-/* BORDE VOLQUETE */
+    html{
+      scroll-behavior:smooth;
+    }
 
-.borde-volquete{
-height:22px;
-background: repeating-linear-gradient(
-45deg,
-#d60000,
-#d60000 20px,
-white 20px,
-white 40px
-);
-}
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--fondo);
+      color:var(--negro);
+      line-height:1.6;
+      text-align:left;
+    }
 
-/* BARRA TELEFONO FIJA */
+    img{
+      max-width:100%;
+      display:block;
+    }
 
-.barra-llamar{
-position:sticky;
-top:0;
-background:#d60000;
-color:white;
-font-size:20px;
-font-weight:bold;
-padding:12px;
-z-index:999;
-}
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
 
-.barra-llamar a{
-color:white;
-text-decoration:none;
-}
+    .container{
+      width:min(92%, var(--max));
+      margin:0 auto;
+    }
 
-/* HEADER */
+    .borde-volquete{
+      height:22px;
+      background:repeating-linear-gradient(
+        45deg,
+        var(--rojo),
+        var(--rojo) 20px,
+        white 20px,
+        white 40px
+      );
+    }
 
-header{
-background:white;
-padding:30px;
-border-bottom:3px solid black;
-}
+    .barra-llamar{
+      position:sticky;
+      top:0;
+      z-index:999;
+      background:var(--rojo);
+      color:white;
+      text-align:center;
+      font-size:20px;
+      font-weight:bold;
+      padding:12px 16px;
+    }
 
-.logo{
-width:260px;
-}
+    .barra-llamar a{
+      color:white;
+    }
 
-h1{
-font-size:34px;
-margin-top:10px;
-}
+    header{
+      background:white;
+      border-bottom:1px solid var(--gris-claro);
+    }
 
-.telefono-grande{
-font-size:38px;
-font-weight:bold;
-margin:25px;
-}
+    .header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      padding:28px 0;
+      flex-wrap:wrap;
+    }
 
-/* BOTONES */
+    .marca{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
 
-.botones{
-margin:30px;
-}
+    .logo{
+      width:220px;
+      max-width:100%;
+      height:auto;
+    }
 
-.boton{
-display:inline-block;
-padding:18px 40px;
-font-size:20px;
-font-weight:bold;
-border-radius:10px;
-text-decoration:none;
-margin:10px;
-box-shadow:0 5px 0 rgba(0,0,0,0.3);
-}
+    .marca-texto small{
+      display:block;
+      color:var(--gris);
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-size:.78rem;
+      margin-bottom:6px;
+      font-weight:bold;
+    }
 
-.llamar{
-background:#d60000;
-color:white;
-font-size:26px;
-padding:22px 55px;
-}
+    .marca-texto strong{
+      display:block;
+      font-size:1.02rem;
+      line-height:1.3;
+    }
 
-.whatsapp{
-background:#25D366;
-color:white;
-}
+    .header-contacto{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
 
-/* SECCIONES */
+    .chip{
+      border:1px solid var(--gris-claro);
+      border-radius:999px;
+      padding:10px 16px;
+      font-size:.95rem;
+      color:var(--gris);
+      background:white;
+    }
 
-.seccion{
-padding:40px 20px;
-max-width:900px;
-margin:auto;
-}
+    .hero{
+      padding:72px 0 64px;
+    }
 
-/* MAPA */
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:28px;
+      align-items:stretch;
+    }
 
-.mapa iframe{
-width:100%;
-height:400px;
-border:0;
-border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,0.2);
-}
+    .eyebrow{
+      display:inline-block;
+      color:var(--gris);
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-size:.82rem;
+      font-weight:bold;
+      margin-bottom:14px;
+    }
 
-/* FOOTER */
+    h1{
+      font-size:clamp(2.2rem, 5vw, 4rem);
+      line-height:1.08;
+      margin-bottom:18px;
+      max-width:800px;
+    }
 
-footer{
-background:#111;
-color:white;
-padding:25px;
-margin-top:40px;
-}
+    .hero p{
+      color:var(--gris);
+      font-size:1.08rem;
+      max-width:760px;
+      margin-bottom:26px;
+    }
 
-/* BOTONES FLOTANTES */
+    .acciones{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:22px;
+    }
 
-.telefono-flotante{
-position:fixed;
-bottom:90px;
-right:20px;
-background:#d60000;
-color:white;
-font-size:28px;
-width:65px;
-height:65px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-text-decoration:none;
-box-shadow:0 4px 12px rgba(0,0,0,0.4);
-}
+    .boton{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:15px 24px;
+      border-radius:999px;
+      font-weight:bold;
+      min-height:50px;
+      transition:.2s ease;
+      border:1px solid transparent;
+    }
 
-.whatsapp-flotante{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-font-size:30px;
-width:65px;
-height:65px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-text-decoration:none;
-box-shadow:0 4px 12px rgba(0,0,0,0.4);
-}
+    .boton:hover{
+      transform:translateY(-1px);
+    }
 
-</style>
+    .boton-llamar{
+      background:var(--rojo);
+      color:white;
+    }
 
+    .boton-whatsapp{
+      background:var(--verde);
+      color:white;
+    }
+
+    .boton-secundario{
+      background:white;
+      border-color:var(--gris-claro);
+      color:var(--negro);
+    }
+
+    .hero-datos{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      color:var(--gris);
+      font-size:.95rem;
+    }
+
+    .hero-box{
+      border:1px solid var(--gris-claro);
+      border-radius:24px;
+      padding:28px;
+      background:linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+      box-shadow:var(--sombra);
+      height:100%;
+    }
+
+    .hero-box h2{
+      font-size:1.3rem;
+      margin-bottom:14px;
+    }
+
+    .hero-box p{
+      font-size:1rem;
+      margin-bottom:16px;
+    }
+
+    .lista{
+      list-style:none;
+      display:grid;
+      gap:12px;
+      margin-bottom:24px;
+    }
+
+    .lista li{
+      position:relative;
+      padding-left:18px;
+      color:var(--negro);
+    }
+
+    .lista li::before{
+      content:"";
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--rojo);
+      position:absolute;
+      left:0;
+      top:10px;
+    }
+
+    section{
+      padding:68px 0;
+      border-top:1px solid var(--gris-claro);
+    }
+
+    .section-head{
+      max-width:820px;
+      margin-bottom:28px;
+    }
+
+    .section-head h2{
+      font-size:clamp(1.7rem, 3vw, 2.4rem);
+      line-height:1.15;
+      margin-bottom:12px;
+    }
+
+    .section-head p{
+      color:var(--gris);
+      font-size:1.02rem;
+    }
+
+    .cards-3{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:22px;
+    }
+
+    .card{
+      background:white;
+      border:1px solid var(--gris-claro);
+      border-radius:var(--radio);
+      padding:26px;
+      box-shadow:var(--sombra);
+    }
+
+    .card h3{
+      font-size:1.12rem;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      color:var(--gris);
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .box{
+      background:white;
+      border:1px solid var(--gris-claro);
+      border-radius:20px;
+      padding:28px;
+      box-shadow:var(--sombra);
+      height:100%;
+    }
+
+    .box h2,
+    .box h3{
+      margin-bottom:14px;
+      font-size:1.3rem;
+    }
+
+    .box p{
+      color:var(--gris);
+    }
+
+    .box p + p{
+      margin-top:14px;
+    }
+
+    .feature-list{
+      list-style:none;
+      display:grid;
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .feature-list li{
+      border:1px solid var(--gris-claro);
+      background:var(--suave);
+      border-radius:14px;
+      padding:14px 16px;
+    }
+
+    .coverage-grid{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:28px;
+    }
+
+    .zone-list{
+      list-style:none;
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:10px;
+      margin-top:10px;
+    }
+
+    .zone-list li{
+      border:1px solid var(--gris-claro);
+      background:var(--suave);
+      border-radius:14px;
+      padding:12px 14px;
+      font-size:.96rem;
+    }
+
+    .mapa iframe{
+      width:100%;
+      height:430px;
+      border:0;
+      border-radius:18px;
+      box-shadow:var(--sombra);
+    }
+
+    .cta-box{
+      background:linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+    }
+
+    footer{
+      background:var(--negro);
+      color:white;
+      padding:32px 0 40px;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .footer-inner p{
+      color:#dddddd;
+    }
+
+    .telefono-flotante,
+    .whatsapp-flotante{
+      position:fixed;
+      right:20px;
+      width:65px;
+      height:65px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-size:30px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.35);
+      z-index:998;
+    }
+
+    .telefono-flotante{
+      bottom:95px;
+      background:var(--rojo);
+      font-size:28px;
+    }
+
+    .whatsapp-flotante{
+      bottom:20px;
+      background:var(--verde);
+    }
+
+    @media (max-width:980px){
+      .hero-grid,
+      .cards-3,
+      .two-col,
+      .coverage-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding:56px 0 48px;
+      }
+    }
+
+    @media (max-width:640px){
+      .header-inner{
+        align-items:flex-start;
+      }
+
+      .acciones{
+        width:100%;
+      }
+
+      .boton{
+        width:100%;
+      }
+
+      .logo{
+        width:180px;
+      }
+
+      .zone-list{
+        grid-template-columns:1fr;
+      }
+
+      .barra-llamar{
+        font-size:18px;
+      }
+
+      .telefono-flotante,
+      .whatsapp-flotante{
+        width:58px;
+        height:58px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="borde-volquete"></div>
+  <div class="borde-volquete"></div>
 
-<div class="barra-llamar">
-<a href="tel:1153063347">📞 LLAMAR AHORA 11-5306-3347</a>
-</div>
+  <div class="barra-llamar">
+    <a href="tel:1153063347">📞 LLAMAR AHORA 11-5306-3347</a>
+  </div>
 
-<header>
+  <header>
+    <div class="container header-inner">
+      <div class="marca">
+        <img src="logo.png" class="logo" alt="VVC - Volquetes en Capital Federal">
+        <div class="marca-texto">
+          <small>Empresa familiar</small>
+          <strong>Alquiler de volquetes en Capital Federal desde 1987</strong>
+        </div>
+      </div>
 
-<img src="logo.png" class="logo" alt="Volquetes Valiño Castro - Volquetes en Capital Federal">
+      <div class="header-contacto">
+        <a class="chip" href="tel:1153063347">11-5306-3347</a>
+        <a class="chip" href="https://wa.me/541153063347" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+    </div>
+  </header>
 
-<h1>Volquetes en Capital Federal – Alquiler de volquetes en CABA</h1>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">VVC · Ciudad de Buenos Aires</span>
+          <h1>Alquiler de volquetes en Capital Federal desde 1987</h1>
+          <p>
+            VVC es una empresa familiar dedicada al alquiler de volquetes en la Ciudad de Buenos Aires.
+            Desde 1987, desarrolla su actividad con una base clara: experiencia, seriedad y continuidad.
+          </p>
 
-<div class="telefono-grande">
-📞 11-5306-3347
-</div>
+          <div class="acciones">
+            <a href="tel:1153063347" class="boton boton-llamar">Llamar ahora</a>
+            <a href="https://wa.me/541153063347" class="boton boton-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
 
-<div class="botones">
+          <div class="hero-datos">
+            <span>Servicio en toda CABA</span>
+            <span>Atención directa</span>
+            <span>Empresa familiar</span>
+          </div>
+        </div>
 
-<a href="tel:1153063347" class="boton llamar">
-LLAMAR AHORA
-</a>
+        <aside class="hero-box" aria-label="Resumen del servicio">
+          <div>
+            <h2>Una trayectoria construida con trabajo real</h2>
+            <p>
+              Una empresa dedicada al mismo rubro desde 1987, con foco en un servicio claro, práctico y sostenido en el tiempo.
+            </p>
+            <ul class="lista">
+              <li>Alquiler de volquetes para obras, reformas, demoliciones y limpiezas</li>
+              <li>Operación enfocada exclusivamente en Capital Federal</li>
+              <li>Base operativa en La Boca</li>
+            </ul>
+          </div>
 
-<a href="https://wa.me/541153063347" class="boton whatsapp">
-WhatsApp
-</a>
+          <a href="https://wa.me/541153063347" class="boton boton-llamar" target="_blank" rel="noopener noreferrer">Solicitar servicio</a>
+        </aside>
+      </div>
+    </section>
 
-</div>
+    <section aria-labelledby="diferenciales">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="diferenciales">Una empresa con historia, continuidad y oficio</h2>
+          <p>
+            Una estructura construida con trabajo real, enfocada en un servicio puntual y sostenida a lo largo de décadas.
+          </p>
+        </div>
 
-</header>
+        <div class="cards-3">
+          <article class="card">
+            <h3>Desde 1987</h3>
+            <p>Décadas de trabajo sostenido dentro del mismo rubro, con experiencia concreta en la actividad.</p>
+          </article>
 
-<section class="seccion">
+          <article class="card">
+            <h3>Capital Federal</h3>
+            <p>Servicio en toda la Ciudad de Buenos Aires, con operación enfocada exclusivamente en CABA.</p>
+          </article>
 
-<h2>Alquiler de Volquetes en Capital Federal</h2>
+          <article class="card">
+            <h3>Empresa familiar</h3>
+            <p>Una forma de trabajar basada en compromiso, continuidad y una identidad que se mantiene vigente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<p>
-Más de 40 años brindando servicio de alquiler de volquetes en Capital Federal para obras, refacciones y limpieza de escombros.
-</p>
+    <section aria-labelledby="servicio">
+      <div class="container two-col">
+        <div class="box">
+          <h2 id="servicio">Servicio de alquiler de volquetes</h2>
+          <p>
+            La actividad principal de VVC es el alquiler de volquetes para obras, reformas, demoliciones, limpiezas y tareas que requieren una solución práctica para el retiro de residuos y escombros.
+          </p>
+          <p>
+            A lo largo de los años, la empresa se especializó en este servicio puntual, con foco en la atención, el conocimiento del rubro y una operatoria ordenada dentro de Capital Federal.
+          </p>
+        </div>
 
-<p>
-Servicio de alquiler de volquetes en barrios como Palermo, Caballito, Belgrano, Almagro, Recoleta, Flores, Barracas, Centro, Boedo, Paternal y Villa Urquiza.
-</p>
+        <div class="box">
+          <h3>Aplicaciones habituales</h3>
+          <ul class="feature-list">
+            <li>Obras y refacciones</li>
+            <li>Demoliciones</li>
+            <li>Limpiezas de obra</li>
+            <li>Retiro de escombros y residuos de trabajos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <section aria-labelledby="trayectoria">
+      <div class="container two-col">
+        <div class="box">
+          <h2 id="trayectoria">Trayectoria construida con trabajo real</h2>
+          <p>
+            Nuestra historia comenzó con una estructura pequeña: un solo camión, tres volquetes y una manera de trabajar basada en el esfuerzo cotidiano. Con el tiempo, el crecimiento de la empresa fue acompañado por experiencia, decisiones estratégicas y una evolución constante dentro del rubro.
+          </p>
+          <p>
+            Hoy, después de décadas de actividad, VVC sigue sosteniendo el mismo criterio con el que empezó: brindar un servicio responsable, claro y respaldado por la trayectoria.
+          </p>
+        </div>
 
-<section class="seccion mapa">
+        <div class="box">
+          <h3>Una identidad que sigue vigente</h3>
+          <p>
+            VVC nació como una empresa familiar y esa identidad continúa siendo parte de su forma de trabajar. Más allá del crecimiento y de los cambios atravesados a lo largo del tiempo, mantiene una lógica construida sobre compromiso, continuidad y experiencia real en la actividad.
+          </p>
+          <p>
+            Con base en La Boca, la empresa continúa desarrollando su actividad dentro del mismo rubro y con el mismo espíritu de trabajo que le dio origen.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<h2>Ubicación</h2>
+    <section aria-labelledby="cobertura">
+      <div class="container coverage-grid">
+        <div class="box">
+          <h2 id="cobertura">Cobertura en toda Capital Federal</h2>
+          <p>
+            VVC brinda servicio en toda la Ciudad de Buenos Aires, con una operación enfocada exclusivamente en Capital Federal. Esa definición permite trabajar con mayor conocimiento de la zona y mantener una organización centrada en ese ámbito de servicio.
+          </p>
+          <p>
+            La operatoria está pensada para responder dentro de CABA, sin extender el servicio a Provincia.
+          </p>
+        </div>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.814269231672!2d-58.35680702452301!3d-34.63413355910463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335e39a9232cd%3A0xb8cb0c5dc260d93d!2sVali%C3%B1o%20Castro%20Volquetes!5e0!3m2!1ses!2sar!4v1773187869640!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="box">
+          <h3>Zonas de servicio</h3>
+          <ul class="zone-list">
+            <li>La Boca</li>
+            <li>San Telmo</li>
+            <li>Barracas</li>
+            <li>Constitución</li>
+            <li>Palermo</li>
+            <li>Caballito</li>
+            <li>Belgrano</li>
+            <li>Recoleta</li>
+            <li>Almagro</li>
+            <li>Flores</li>
+            <li>Villa Urquiza</li>
+            <li>Y toda Capital Federal</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <section aria-labelledby="ubicacion" class="mapa">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="ubicacion">Ubicación</h2>
+          <p>
+            Base operativa en La Boca, con servicio en toda la Ciudad de Buenos Aires.
+          </p>
+        </div>
 
-<footer>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.814269231672!2d-58.35680702452301!3d-34.63413355910463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335e39a9232cd%3A0xb8cb0c5dc260d93d!2sVali%C3%B1o%20Castro%20Volquetes!5e0!3m2!1ses!2sar!4v1773187869640!5m2!1ses!2sar"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
 
-Volquetes Valiño Castro - Servicio de volquetes en Capital Federal (CABA)
-Tel: 11-5306-3347
+    <section aria-labelledby="cta-final">
+      <div class="container">
+        <div class="box cta-box">
+          <div class="section-head">
+            <h2 id="cta-final">Experiencia, continuidad y servicio</h2>
+            <p>
+              Con base en La Boca y cobertura en toda Capital Federal, VVC continúa desarrollando su actividad con el mismo criterio que le dio origen: trabajo serio, atención responsable y trayectoria en el servicio de volquetes.
+            </p>
+          </div>
 
-</footer>
+          <div class="acciones">
+            <a href="https://wa.me/541153063347" class="boton boton-llamar" target="_blank" rel="noopener noreferrer">Pedir volquete</a>
+            <a href="tel:1153063347" class="boton boton-secundario">Llamar ahora</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<a href="tel:1153063347" class="telefono-flotante">
-📞
-</a>
+  <footer>
+    <div class="container footer-inner">
+      <p>VVC · Alquiler de volquetes en Capital Federal desde 1987</p>
+      <p>Tel: 11-5306-3347 · WhatsApp</p>
+    </div>
+  </footer>
 
-<a href="https://wa.me/541153063347" class="whatsapp-flotante">
-💬
-</a>
+  <a href="tel:1153063347" class="telefono-flotante" aria-label="Llamar por teléfono">
+    📞
+  </a>
 
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "LocalBusiness",
-"name": "Volquetes Valiño Castro",
-"telephone": "+54 11 5306-3347",
-"areaServed": "Capital Federal",
-"address": {
-"streetAddress": "Olavarría 63",
-"@type": "PostalAddress",
-"addressLocality": "Buenos Aires",
-"addressCountry": "AR"
-},
-"url": "https://vvc.com.ar"
-}
-</script>
+  <a href="https://wa.me/541153063347" class="whatsapp-flotante" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    💬
+  </a>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "VVC",
+    "telephone": "+54 11 5306-3347",
+    "url": "https://vvc.com.ar/",
+    "description": "Empresa familiar dedicada al alquiler de volquetes en Capital Federal desde 1987.",
+    "areaServed": "Capital Federal",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Olavarría 63",
+      "addressLocality": "La Boca",
+      "addressRegion": "Ciudad Autónoma de Buenos Aires",
+      "addressCountry": "AR"
+    }
+  }
+  </script>
 
 </body>
-
 </html>
